@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
+:root {
+  --primary-color: rgb(123, 204, 157);
+  --primary-color-darker: rgb(78, 145, 106);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  font-family: "Coming Soon", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+body section.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+body section.container div.first-text {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+body section.container .result {
+  background-color: antiquewhite;
+  color: black;
+}
+body section.container form input,
+body section.container form label,
+body section.container form button {
+  display: block;
+  min-width: 100%;
+  margin-bottom: 10px;
+}
+body section.container form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+body section.container form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+body section.container form button {
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+body section.container form button:hover {
+  background: var(--primary-color-darker);
+}
