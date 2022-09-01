@@ -63,6 +63,7 @@ window.addEventListener('click', () => {
             salvarChecked(e.parentNode, atributoForLabel);
         } else {
             e.style.textDecoration = "none"
+            semChecked(e.parentNode, atributoForLabel)
         }
     })
 })
@@ -70,6 +71,12 @@ window.addEventListener('click', () => {
 function salvarChecked(label, atributoForLabel) {
     let input = document.querySelector('#' + atributoForLabel);
     input.setAttribute('checked', 'true')
+    localStorage.setItem(input.id, label.outerHTML)
+}
+
+function semChecked(label, atributoForLabel) {
+    let input = document.querySelector('#' + atributoForLabel);
+    input.removeAttribute('checked')
     localStorage.setItem(input.id, label.outerHTML)
 }
 
