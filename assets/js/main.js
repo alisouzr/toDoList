@@ -66,14 +66,6 @@ window.addEventListener('click', () => {
     })
 })
 
-/* finalizada.addEventListener('click', () => {
-    document.querySelectorAll("label").forEach(function (e) {
-        let atributoForLabel = e.getAttribute("for");
-        if (document.querySelector("#" + atributoForLabel).checked == true) {
-            e.style.textDecoration = "line-through";
-        }
-    })
-}) */
 
 window.addEventListener('load', () => {
     let cont = localStorage.getItem("contador");
