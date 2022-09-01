@@ -60,12 +60,18 @@ window.addEventListener('click', () => {
         let atributoForLabel = e.getAttribute("for");
         if (document.querySelector("#" + atributoForLabel).checked == true) {
             e.style.textDecoration = "line-through";
+            salvarChecked(e.parentNode, atributoForLabel);
         } else {
             e.style.textDecoration = "none"
         }
     })
 })
 
+function salvarChecked(label, atributoForLabel) {
+    let input = document.querySelector('#' + atributoForLabel);
+    input.setAttribute('checked', 'true')
+    localStorage.setItem(input.id, label.outerHTML)
+}
 
 window.addEventListener('load', () => {
     let cont = localStorage.getItem("contador");
